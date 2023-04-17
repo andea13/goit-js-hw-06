@@ -1,8 +1,8 @@
 const refs = {
-  formSubmitBtn: document.querySelector(".login-form"),
+  formSubmit: document.querySelector(".login-form"),
 };
 
-refs.formSubmitBtn.addEventListener("submit", onFormSubmit);
+refs.formSubmit.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -21,5 +21,5 @@ function onFormSubmit(event) {
     return alert("Всі поля повинні бути заповнені!");
   }
   console.log(formData);
-  console.log(formData.reset);
+  refs.formSubmit.reset();
 }
